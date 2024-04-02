@@ -1,0 +1,4 @@
+include_directories(include)
+file(GLOB COMMANDS_HRC ${HRC_REGEX})
+file(GLOB COMMANDS_SRC ${SRC_REGEX})
+add_library(${COMMANDS_NAME} STATIC ${COMMANDS_HRC} ${COMMANDS_SRC})

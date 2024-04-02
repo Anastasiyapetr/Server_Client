@@ -1,0 +1,5 @@
+include_directories(include)
+file(GLOB SERVER_HRC ${HRC_REGEX})
+file(GLOB SERVER_SRC ${SRC_REGEX})
+add_library(${SERVER_NAME} STATIC ${SERVER_HRC} ${SERVER_SRC})
+target_link_libraries(${SERVER_NAME} PRIVATE ${COMMANDS_NAME})
